@@ -34,7 +34,7 @@ while (i) {
 */
 let z = 40
 while (z < 92) {
-    console.log('task 3:', z);
+  console.log('task 3:', z);
     z++;
 }
 
@@ -66,17 +66,17 @@ console.log('task 7:', res)
 
 
 
-let day = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота']
+let day = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота','Воскресенье']
 
 for(let d2 = 0; d2 < day.length; d2++){
-    console.log('task 8', day[d2])
+  console.log('task 8', day[d2])
 }
 
 
-let days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота']
+let days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
 
 for(let d1 = 0; d1 < days.length; d1++){
-    console.log('task 9', days[d1])
+  console.log('task 9', days[d1])
 }
 
 
