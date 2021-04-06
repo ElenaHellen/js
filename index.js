@@ -1,38 +1,44 @@
-let x = true + false
-console.log('task 1:', '1)', x)
-let y = 12 / "6"
-console.log('task 1:', '2)', y)
-let a = "number" + 15 + 3
-console.log('task 1:', '3)', a)
-let b = 5 + 3 + "number"
-console.log('task 1:', '4)', b)
-let c = [1] > null
-console.log('task 1:', '5)', c)
-let f = "foo" + + "bar"
-console.log('task 1:', '6)', f)
-let d = 'true' == true
-console.log('task 1:', '7)', d)
-let e = false == 'false'
-console.log('task 1:', '8)', e)
-let g = null == ''
-console.log('task 1:', '9)', g)
-let w = !!"false" == !!"true"
-console.log('task 1:', '10)', w)
-let p = ['x'] == 'x'
-console.log('task 1:', '11)', p)
-let l = [] + null + 1
-console.log('task 1:', '12)', l)
-let n = 0 || "0" && {}
-console.log('task 1:', '13)', n)
-let m = [1,2,3] == [1,2,3]
-console.log('task 1:', '14)', m)
+let arrayStr = ["a", "b", "c"];
+let arrayNum = [1, 2, 3];
+let arrayCombined = arrayStr.concat(arrayNum);
+console.log("Task 1:", arrayCombined);
 
-let i = 3;
-while (i) {
-  alert( i-- );
-}
+arrayStr.push(1, 2, 3);
+console.log("Task 2:", arrayStr);
 
-let allNum = 40
-while (allNum < 92) {
-    console.log(allNum)
+arrayNum.reverse();
+console.log("Task 3:", arrayNum);
+
+let arrNum = [1, 2, 3, 4, 5];
+let arrNumCutFirst = arrNum.slice(0, 3);
+console.log("Task 4:", arrNumCutFirst);
+
+let arrNumCutSecond = arrNum.slice(3, 5);
+console.log("Task 5:", arrNumCutSecond);
+
+const arrObj = { js: "test", jq: "hello", css: "world" };
+console.log("Task 6", Object.keys(arrObj));
+
+let arr = [[1, 2],[2, 3],[4, 5]];
+let sum = 0;
+for (let i = 0; i < arr.length; i++) {
+  for (let j = 0; j < arr[i].length; j++) {
+    sum += arr[i][j];
+  }
 }
+console.log(sum);
+
+let arr1 = [[1, 2],[3, 4], [5, 6], [7, 8]];
+let summ = 0;
+for (let i1 = 0; i1 < arr1.length; i1++) {
+  for (let j1 = 0; j1 < arr1[i1].length; j1++) {
+    for (let k = 0; k < arr1[i1][j1].length; k++) {
+      summ += arr1[i1][j1][k];
+    }
+  }
+}
+console.log(summ);
+
+let num = [1, 2, 3, 4, 5, 6];
+result = num.join("", 6, "", 5, 4, 3, 2, 1);
+console.log(result);
