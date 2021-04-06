@@ -16,29 +16,47 @@ console.log("Task 4:", arrNumCutFirst);
 let arrNumCutSecond = arrNum.slice(3, 5);
 console.log("Task 5:", arrNumCutSecond);
 
-const arrObj = { js: "test", jq: "hello", css: "world" };
-console.log("Task 6", Object.keys(arrObj));
+const arrObj = { js: "test", jq: "hello", css: "world" }
+console.log("Task 6", Object.keys(arrObj))
 
-let arr = [[1, 2],[2, 3],[4, 5]];
-let sum = 0;
-for (let i = 0; i < arr.length; i++) {
-  for (let j = 0; j < arr[i].length; j++) {
-    sum += arr[i][j];
+let arrSumTwoElement = [[1, 2, 3], [4, 5], [6]]
+let arrSum = 0
+for (let i = 0; i < arrSumTwoElement.length; i++) {
+  for (let j = 0; j < arrSumTwoElement[i].length; j++) {
+    arrSum += arrSumTwoElement[i][j]
   }
 }
-console.log(sum);
+console.log('Task 8:', arrSum)
 
-let arr1 = [[1, 2],[3, 4], [5, 6], [7, 8]];
-let summ = 0;
-for (let i1 = 0; i1 < arr1.length; i1++) {
-  for (let j1 = 0; j1 < arr1[i1].length; j1++) {
-    for (let k = 0; k < arr1[i1][j1].length; k++) {
-      summ += arr1[i1][j1][k];
+let arrSumThreeElement = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]
+let arrSumm = 0
+for (let n = 0; n < arrSumThreeElement.length; n++) {
+  for (let m = 0; m < arrSumThreeElement[n].length; m++) {
+    for (let k = 0; k < arrSumThreeElement[n][m].length; k++) {
+      arrSumm += arrSumThreeElement[n][m][k]
     }
   }
 }
-console.log(summ);
+console.log('Task 9:', arrSumm)
 
-let num = [1, 2, 3, 4, 5, 6];
-result = num.join("", 6, "", 5, 4, 3, 2, 1);
-console.log(result);
+/*let arrFirst = [1, 2, 3]
+let arrSecond = [1, 2, 3]
+function arrСomparison() {
+    if (arrFirst.length == arrSecond.length) {
+        return true;
+    }
+}
+console.log(arrComparison)
+*/
+
+let arrElement = [1, 2, 3, 4, 5, 6];
+let arrElementMap = arrElement.map(el => el*el);
+console.log('Task 11:', arrElementMap);
+
+let arrNegativeElement = [-2, 1, 2, -30, 4, -1, -26];
+let arrNegative = arrNegativeElement.filter(el => el < 0);
+console.log('Task 12:', arrNegative);
+
+let arrSumElement = arrElement.reduce((el1, el2) => el1 + el2);
+console.log('Task 13:', arrSumElement);
+
