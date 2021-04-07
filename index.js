@@ -41,5 +41,5 @@ for(h = 0; h < arrFirst.length; h++)
 }
 // 8
 let arrSum = [[1, 2, 3], [4, 5], [6]];
-sum = arrSum.flat(Infinity).reduce((i, j)=> i + j, 0);
+sum = arrSum.flat().reduce((i, j)=> i + j, 0);
 console.log(sum);
