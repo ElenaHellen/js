@@ -39,15 +39,6 @@ for (let n = 0; n < arrSumThreeElement.length; n++) {
 }
 console.log('Task 9:', arrSumm)
 
-/*let arrFirst = [1, 2, 3]
-let arrSecond = [1, 2, 3]
-function arrСomparison() {
-    if (arrFirst.length == arrSecond.length) {
-        return true;
-    }
-}
-console.log(arrComparison)
-*/
 
 let arrElement = [1, 2, 3, 4, 5, 6];
 let arrElementMap = arrElement.map(el => el*el);
@@ -59,4 +50,17 @@ console.log('Task 12:', arrNegative);
 
 let arrSumElement = arrElement.reduce((el1, el2) => el1 + el2);
 console.log('Task 13:', arrSumElement);
+
+// Task 10
+let arrFirst = [1, 2, 3];
+let arrSecond = [1, 2, 3];
+function arrСomparison(arrFirst, arrSecond) {
+  if(arrFirst.length == arrSecond.length)
+    return true;
+
+  for(h = 0; h < arrFirst.length; h++)
+    if(arrFirst[h] == arrSecond[h])
+      return true;
+}
+
 
