@@ -7,7 +7,7 @@ let objArr = { a: 1, b: 2 };
 let obj = (objArr) => Object.entries(objArr);
 console.log('2)', obj(objArr))
 
-//3.??? Напишите функцию isPlainObject, которая проверяет, является ли элемент именно объектом, а не массивом, null и т.п.
+//3.Напишите функцию isPlainObject, которая проверяет, является ли элемент именно объектом, а не массивом, null и т.п.
 let objElement = { id: 'Pasha' };
 let isPlainObject = (el) => typeof el === 'object' && !Array.isArray(el) && el !== null;
 console.log('3)', isPlainObject(objElement))
@@ -22,7 +22,7 @@ let objCar = {
 let objNewCar = (name, color, year) => {return name, color, year}
 console.log('4)', objCar)
 
-//5. ???Напишите функцию, которая сравнивает два объекта по значениям.
+//5.Напишите функцию, которая сравнивает два объекта по значениям.
 let a = { a: 1, b: 1 };
 let b = { a: 1, b: 1 };
 console.log('5)', Object.is(a,b)); 
