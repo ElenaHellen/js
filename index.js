@@ -8,8 +8,8 @@ let obj = (objArr) => Object.entries(objArr);
 console.log('2)', obj(objArr))
 
 //3.Напишите функцию isPlainObject, которая проверяет, является ли элемент именно объектом, а не массивом, null и т.п.
-let objElement = { id: 'Pasha' };
-let isPlainObject = (el) => typeof el === 'object' && !Array.isArray(el) && el !== null;
+let objElement = { id: 'Pasha', a: 1};
+let isPlainObject = (el) => {return (typeof el === 'object' && !Array.isArray(el) && el !== null)};
 console.log('3)', isPlainObject(objElement))
 
 //4. Напишите функцию, которая возвращает новый объект без указанных значений.
