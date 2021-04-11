@@ -12,40 +12,24 @@ let objElement = { id: 'Pasha' };
 let isPlainObject = (el) => typeof el === 'object' && !Array.isArray(el) && el !== null;
 console.log('3)', isPlainObject(objElement))
 
-//4. Напишите функцию, которая возвращает новый объект без указанных значений.Т.е в качестве параметров функции вы указываете свойства объекта и на выходе вы получите объект без этих свойств.
-const data = { a: 1, b: 2, c: 3 };
-const without = (object, ...args) => {
-  const newObject = { ...object };
+//4. Напишите функцию, которая возвращает новый объект без указанных значений.
+//Т.е в качестве параметров функции вы указываете свойства объекта и на выходе вы получите объект без этих свойств.
+let objCar = {
+  name: 'Honda',
+  color: 'red',
+  year: '2021'
+}
+let objNewCar = (name, color, year) => {return name, color, year}
+console.log('4)', objCar)
 
-  args.forEach((arg) => {
-    delete newObject[arg];
-  });
-
-  return newObject;
-};
-console.log('4)',without(data, 'b', 'c'));
-
-//5. Напишите функцию, которая сравнивает два объекта по значениям.
+//5. ???Напишите функцию, которая сравнивает два объекта по значениям.
 let a = { a: 1, b: 1 };
 let b = { a: 1, b: 1 };
 console.log('5)', Object.is(a,b)); 
 
+//6. Напишите функцию, которая поверхностно находит пересечения объектов и возвращает объект пересечений.
+let element1 = [1, 2, 'a', 'n', 8];
+let element2 = ['a', 2, 'Hello', 5 ,8];
+function intersection(element1, element2) {return element1.filter(el => element2.includes(el))}
 
-
-const data4 = { a: 1, b: 2 };
-const data5 = { c: 1, b: 2 };
-const intersection = (firstObj, secondObj) => {
-  const firstObjKeys = Object.keys(firstObj);
-
-  return firstObjKeys.reduce((acc = {}, key) => {
-    if (firstObj[key] === secondObj[key]) {
-      acc = {
-        ...acc,
-        [key]: firstObj[key],
-      };
-    }
-
-    return acc;
-  }, {});
-};
-console.log(intersection('7)', data4, data5));
+console.log('6)', intersection(element1, element2));
