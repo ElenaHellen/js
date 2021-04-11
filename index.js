@@ -27,9 +27,12 @@ let a = { a: 1, b: 1 };
 let b = { a: 1, b: 1 };
 console.log('5)', Object.is(a,b)); 
 
-//6. Напишите функцию, которая поверхностно находит пересечения объектов и возвращает объект пересечений.
-let element1 = [1, 2, 'a', 'n', 8];
-let element2 = ['a', 2, 'Hello', 5 ,8];
-function intersection(element1, element2) {return element1.filter(el => element2.includes(el))}
-
+//6. ??? Напишите функцию, которая поверхностно находит пересечения объектов и возвращает объект пересечений.
+let element1 = { a: 1, b: 1 };
+let element2 =  { a: 1, c: 5 };
+function intersection(element1, element2) {
+  let intersectionSet = {};
+  Object.keys(element1).filter(el => el in element2).forEach(el => intersectionSet[el] = true);
+  return intersectionSet;
+}
 console.log('6)', intersection(element1, element2));
