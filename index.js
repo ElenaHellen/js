@@ -12,12 +12,13 @@ let objElement = { id: 'Pasha', a: 1};
 let isPlainObject = (el) => {return (typeof el === 'object' && !Array.isArray(el) && el !== null)};
 console.log('3)', isPlainObject(objElement));
 
-//5.Напишите функцию, которая сравнивает два объекта по значениям.
-let a = { a: 1, b: 1 };
-let b = { a: 1, b: 1 };
-console.log('5)', Object.is(a,b)); 
+//5.? Напишите функцию, которая сравнивает два объекта по значениям.
+let obj1 = { a: 1, b: 1 };
+let obj2 = { a: 1, b: 1 };
+let deepEqual = (a, b) =>{return JSON.stringify(a)===JSON.stringify(b);}
+console.log('5)', deepEqual(obj1, obj2)); 
 
-//6. ??? Напишите функцию, которая поверхностно находит пересечения объектов и возвращает объект пересечений.
+//6. ? Напишите функцию, которая поверхностно находит пересечения объектов и возвращает объект пересечений.
 let element1 = { a: 1, b: 1 };
 let element2 =  { a: 1, c: 5 };
 function intersection(element1, element2) {
