@@ -34,8 +34,14 @@ function buttonClick18() {
 	a.style.width = "10%";
 	a.value ++;
 }
-function buttonClick19() {
+/*function buttonClick19() {
 	let box5 = document.getElementById('box5');
 	box5.value = 'Теперь я справа'
-}
+	
+}*/
 
+function buttonClick20() {
+	let box6 = document.getElementById('box6');
+	box6.value = 'Мои css классы: eee www ddd'
+	box6.style.width = "20%";
+}
