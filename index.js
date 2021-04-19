@@ -42,6 +42,7 @@ function buttonClick18() {
 
 function buttonClick20() {
 	let box6 = document.getElementById('box6');
-	box6.value = 'Мои css классы: eee www ddd'
+	let name = box6.classList;
+	box6.value = name
 	box6.style.width = "20%";
 }
