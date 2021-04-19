@@ -43,6 +43,6 @@ function buttonClick18() {
 function buttonClick20() {
 	let box6 = document.getElementById('box6');
 	let name = box6.classList;
-	box6.value = name
+	box6.value ="Мои классы: " + name
 	box6.style.width = "20%";
 }
