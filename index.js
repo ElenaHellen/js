@@ -1,5 +1,5 @@
 let btn1 = document.getElementById('button1')
-btn1.addEventListener('click', npt1, true)
+btn1.addEventListener('click', npt1)
 function npt1() { alert('Привет')}
 
 let btn2 = document.getElementById('button2')
