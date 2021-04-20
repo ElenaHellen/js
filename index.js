@@ -1,5 +1,5 @@
 let btn1 = document.getElementById('button1')
-btn1.addEventListener('click', npt1)
+btn1.addEventListener('click', npt1, true)
 function npt1() { alert('Привет')}
 
 let btn2 = document.getElementById('button2')
@@ -66,16 +66,16 @@ function buttonClick18() {
 	btn18.style.width = "10%";
 	btn18.value ++;
 }
-/*
+
 let btn19 = document.getElementById('button19')
 btn19.addEventListener('click', buttonClick19)
 function buttonClick19() {
 	let box5 = document.getElementById('box5');
 	box5.value = 'Теперь я справа'
-	box5.style.paddingLeft = '200px'
+	box5.style.cssFloat = 'right'
 	
 }
-*/
+
 let btn20 = document.getElementById('button20')
 btn20.addEventListener('click', buttonClick20)
 function buttonClick20() {
@@ -83,4 +83,48 @@ function buttonClick20() {
 	let name = box6.classList;
 	box6.value ="Мои классы: " + name
 	box6.style.width = "20%";
+}
+
+let btn21 = document.getElementById("button21");
+btn21.addEventListener('click', buttonClick21) ;
+
+    function buttonClick21() {
+    let input1 = document.getElementById('first');
+	let input2 = document.getElementById('second');
+	let f = input1.value;
+	let h = input2.value;
+	input1.value = h;
+	input2.value = f;
+    }
+
+	let btn22 = document.getElementById("button22");
+	btn22.addEventListener('click', buttonClick22);
+	let l = document.getElementById('input2')
+	l.disabled = true
+	function buttonClick22() {
+	let g = document.getElementById('input1')
+	let s = document.getElementById('input2')
+	let m = g.value
+	s.value = Math.pow(m,2) 
+}
+
+let btn23 = document.getElementById("button23");
+btn23.addEventListener('click', buttonClick23);
+let l23 = document.getElementById('second23')
+l23.disabled = true
+function buttonClick23() {	
+	let g23 = document.getElementById('first23')
+	let s23 = document.getElementById('second23')
+	let m23 = g23.value
+	if (isFinite(m23))
+	s23.value = Math.pow(m23,2) 
+	else 
+	alert("Введите число!")
+}
+
+let btn24 = document.getElementById("button24");
+btn24.addEventListener('click', buttonClick24);
+function buttonClick24() { 
+	btn24.disabled = true
+	btn24.style.cursor = 'not-allowed'
 }
