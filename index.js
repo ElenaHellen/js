@@ -1,4 +1,5 @@
 // 2
+
 var Robot = function (name) {
 	this.name = name;
 }
@@ -16,21 +17,19 @@ console.log('2.3)', add.apply(voltron , [20, 30]))
 setTimeout( () => {console.log('2.4)', add.bind(voltron)('drinking', 'beer'))},
  1000);
 
-
-
 // 3
 
 let btn = document.getElementById('btn')
 btn.addEventListener('click', func) 
 function func() {
-	setTimeout( () => { console.log('3.1) ', 'Hello world')}, 5000);
+	setTimeout( () => { console.log('3a) ', 'Hello world')}, 5000);
 }  
 
 let btn1 = document.getElementById('btn1')
 btn1.addEventListener('click', func1) 
+let t = 0
 function func1() {
-	setInterval( () =>  console.log('3.2) ', 'You are welcome'), 3000);
-
+	setInterval( () =>  {console.log('3b) ', 'You are welcome')}, 3000);
 }
 
 let input = document.getElementById('input')
@@ -38,7 +37,16 @@ input.addEventListener('keyup', func3)
 let time = 0;
 function func3() {
 	clearInterval(time)
-	time = setTimeout( () =>  console.log('3.4) ', input.value), 1000);
+	time = setTimeout( () => {console.log('3d) ', input.value)}, 1000);
 }
 
+//4
 
+function delay(duration){
+	return new Promise(resolve => setTimeout(resolve, duration))
+  }
+  function logHi(){
+	console.log('4a)', 'hi');
+  }
+  delay(2000).then(logHi);
+  
