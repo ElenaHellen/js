@@ -10,21 +10,21 @@ function add (op1, op2) {
 }
 var voltron = new Robot("Voltron");
 
-console.log('2.1)', add(0,1))
+console.log('2.1)', add(0,1)) 
 console.log('2.2)', add.call(voltron, 1, 2))
 console.log('2.3)', add.apply(voltron , [20, 30]))
 
-setTimeout( () => {console.log('2.4)', add.bind(voltron)('drinking', 'beer'))},
- 1000);
+setTimeout( () => {console.log('2.4)', add.bind(voltron)('drinking', 'beer'))},1000);
 
 // 3
-
+//3a
 let btn0 = document.getElementById('btn0')
 btn0.addEventListener('click', func) 
 function func() {
 	setTimeout( () => { console.log('3a) ', 'Hello world')}, 5000);
 }  
 
+//3b
 let enabledBtn1 = false
 let interval;
 let btn1 = document.getElementById('btn1')
@@ -47,11 +47,11 @@ function func1() {
 	
 }
 
-let enabledBtn2 = false
+//3c
+/*let enabledBtn2 = false
 let interval2;
 let btn2 = document.getElementById('btn2')
 btn2.addEventListener('click', func2) 
-
 
 let seconds =  Math.floor(Math.random() * 5000-1000)
 function func2() {
@@ -70,10 +70,9 @@ function func2() {
 		clearInterval(interval2);
 	}
 	
-}
+}*/
 	
-
-
+//3d
 let input = document.getElementById('input')
 input.addEventListener('keyup', func3)
 let time = 0;
@@ -82,7 +81,7 @@ function func3() {
 	time = setTimeout( () => {console.log('3d) ', input.value)}, 1000);
 }
 
-//4
+//4a
 
 function delay(duration){
 	return new Promise(resolve => setTimeout(resolve, duration))
@@ -92,21 +91,25 @@ function delay(duration){
   }
   delay(2000).then(logHi);
 
-
-  new Promise(function(resolve, reject) {
+//4b
+new Promise(function(resolve, reject) {
 setTimeout(() => resolve(10), 3000)
 }).then((result) => {
-	console.log(result)
+	console.log('4b)', result)
 	return result + 2
-		// должно вывести в console значение полученное и передать дальше
+	// должно вывести в console значение полученное и передать дальше
 	// увеличенное на 2
-  }).then((result) => {
-	setTimeout(() => console.log(result),2000)
+}).then((result) => {
+	setTimeout(() => console.log('4b)', result),2000)
 	return result + 2
 	// должно вывести в console значение полученное и передать дальше
 	// увеличенное на 2 через 2 секунды
-  }).then((result) => {
-	console.log(result)
+}).then((result) => {
+	console.log('4b)', result)
 	// должно вывести конечный результат
-  });
-  
+});
+
+//4c Написать Promise который выводит console.log в случае если время выполнения 
+//не превысило 2 секунд, и console.error в случае если превысило. Время должно 
+//определяться случайным образом, использовать внутренний обработчик ошибок для Promise
+
